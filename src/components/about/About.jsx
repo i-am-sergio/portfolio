@@ -16,7 +16,7 @@ const About = () => {
           With 3 years of experience, I'm a versatile full stack developer proficient in frontend, backend, and database technologies. I've developed web, mobile, and desktop applications, driven by the passion to create innovative solutions.
             {/* Frontend and Backend Developer, I create web pages with UI / UX user interface, I have 2 years of experience and many clients are happy with projects carried out{" "} */}
           </p>
-          <a download href={CV} className="button button--flex">
+          <a download href={CV} className="button button--flex animation1">
             Download CV
             <svg
               className="button__icon"

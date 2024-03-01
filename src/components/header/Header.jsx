@@ -1,4 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { FaBars, FaRegUser, FaRegFileAlt } from "react-icons/fa";
+import { FaFolderTree } from "react-icons/fa6";
+import { IoBriefcaseOutline, IoMailOutline, IoClose } from "react-icons/io5";
+import { AiOutlineHome } from "react-icons/ai";
 import "./header.css";
 
 const Header = () => {
@@ -15,7 +19,7 @@ const Header = () => {
     <header className="header">
       <nav className="nav container">
         <a href="index.html" className="nav__logo">
-          SergiDev
+          SergioDev
         </a>
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
@@ -27,7 +31,8 @@ const Header = () => {
                   activeNav === "#home" ? "nav__link active-link" : "nav__link"
                 }
               >
-                <i className="uil uil-estate nav__icon active-link"></i> Home
+                <AiOutlineHome className="uil uil-estate nav__icon"/>
+                Home
               </a>
             </li>
             <li className="nav__item">
@@ -38,7 +43,8 @@ const Header = () => {
                   activeNav === "#about" ? "nav__link active-link" : "nav__link"
                 }
               >
-                <i className="uil uil-user nav__icon"></i> About
+                <FaRegUser className="uil uil-user nav__icon"/>
+                About
               </a>
             </li>
             <li className="nav__item">
@@ -51,7 +57,8 @@ const Header = () => {
                     : "nav__link"
                 }
               >
-                <i className="uil uil-file-alt nav__icon"></i> Skills
+                <FaRegFileAlt className="uil uil-file-alt nav__icon"/>
+                Skills
               </a>
             </li>
             <li className="nav__item">
@@ -64,7 +71,8 @@ const Header = () => {
                     : "nav__link"
                 }
               >
-                <i className="uil uil-briefcase-alt nav__icon"></i> Services
+                <IoBriefcaseOutline className="uil uil-briefcase-alt nav__icon"/>
+                Services
               </a>
             </li>
             <li className="nav__item">
@@ -78,7 +86,8 @@ const Header = () => {
                     : "nav__link"
                 }
               >
-                <i className="uil uil-scenery nav__icon"></i> Portfolio
+                <FaFolderTree className="uil uil-scenery nav__icon"/>
+                 Portfolio
               </a>
             </li>
             <li className="nav__item">
@@ -91,17 +100,22 @@ const Header = () => {
                     : "nav__link"
                 }
               >
-                <i className="uil uil-message nav__icon"></i> Contact
+                <IoMailOutline className="uil uil-message nav__icon"/>
+                Contact
               </a>
             </li>
           </ul>
-          <i
+          {/* <i
             className="uil uil-times nav__close"
             onClick={() => showMenu(!Toggle)}
-          ></i>
+          ></i> */}
+          <IoClose className="uil uil-times nav__close"
+            onClick={() => showMenu(!Toggle)} />
         </div>
         <div className="nav__toggle" onClick={() => showMenu(!Toggle)}>
-          <i className="uil uil-apps"></i>
+          {/* <i className="uil uil-apps"></i> */}
+          {/* <IoMdApps className="uil uil-apps"/> */}
+          <FaBars className="uil uil-apps"/>
         </div>
       </nav>
     </header>

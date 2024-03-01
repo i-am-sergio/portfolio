@@ -1,4 +1,7 @@
 import { useRef } from "react";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { FaFacebookMessenger, FaArrowRight } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 import emailjs from "@emailjs/browser";
 import "./contact.css";
 
@@ -20,46 +23,51 @@ const Contact = () => {
 
   return (
     <section className="contact section" id="contact">
-      <h2 className="section__title">Get in touch</h2>
-      <span className="section__subtitle">Contact me</span>
+      <h2 className="section__title">Contact Me</h2>
+      <span className="section__subtitle">Get in touch</span>
       <div className="contact__container container grid">
         <div className="contact__content">
           <h3 className="contact__title">Talk to me</h3>
 
           <div className="contact__info">
             <div className="contact__card">
-              <i className="bx bx-mail-send contact__card-icon"></i>
-              <h3 className="contact_card-title">Email</h3>
+              {/* <i className="bx bx-mail-send contact__card-icon"></i> */}
+              <SiGmail className="bx bx-mail-send contact__card-icon" />
+              <h3 className="contact_card-title">Gmail</h3>
               <span className="contact__card-data">sergio15dev@gmail.com</span>
               <a
                 href="mailto:ssergio15dev@gmail.com.com"
                 className="contact__button"
+                target="_blank"
               >
                 Write me
-                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
+                <FaArrowRight className="bx bx-right-arrow-alt contact__button-icon"/>
               </a>
             </div>
 
             <div className="contact__card">
-              <i className="bx bxl-whatsapp contact__card-icon"></i>
+              <IoLogoWhatsapp className="bx bxl-whatsapp contact__card-icon"/>
               <h3 className="contact_card-title">WhatsApp</h3>
               <span className="contact__card-data">+51 916729168</span>
               <a
                 href="https://api.whatsapp.com/send?phone=51916729168&text=Hello, more information!"
                 className="contact__button"
+                target="_blank"
               >
                 Write me
-                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
+                <FaArrowRight className="bx bx-right-arrow-alt contact__button-icon"/>
               </a>
             </div>
 
             <div className="contact__card">
-              <i className="bx bxl-messenger contact__card-icon"></i>
+              <FaFacebookMessenger className="bx bxl-messenger contact__card-icon"/>
               <h3 className="contact_card-title">Messenger</h3>
               <span className="contact__card-data">user.fb123</span>
-              <a href="#home" className="contact__button">
+              <a href="#home" className="contact__button" 
+                target="_blank"
+              >
                 Write me
-                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
+                <FaArrowRight className="bx bx-right-arrow-alt contact__button-icon"/>
               </a>
             </div>
           </div>
@@ -99,7 +107,7 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <button className="button button--flex">
+            <button className="button button--flex animation-scale">
               Send Message
               <svg
                 className="button__icon"

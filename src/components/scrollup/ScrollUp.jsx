@@ -1,4 +1,5 @@
 import "./scrollup.css"
+import { FaArrowUp } from "react-icons/fa";
 
 const ScrollUp = () => {
 
@@ -9,8 +10,8 @@ const ScrollUp = () => {
   } )
 
   return (
-    <a href="#" className="scrollup">
-      <i className="uil uil-arrow-up scrollup__icon"></i>
+    <a href="#home" className="scrollup" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} >
+      <FaArrowUp style={{color: "white", margin: "3px 3px" }} />
     </a>
   )
 }

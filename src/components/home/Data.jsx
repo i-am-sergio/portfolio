@@ -59,8 +59,8 @@ const Data = () => {
       <p className="home__description">
         Hi there! I'm a passionate full stack developer dedicated to creating all kinds of robust applications. With expertise in both frontend and backend technologies
       </p>
-      <a href="#contact" className="button button--flex">
-        Say Hello
+      <a href="#contact" className="button button--flex animation1">
+        Contact Me
         <svg
           className="button__icon"
           xmlns="http://www.w3.org/2000/svg"

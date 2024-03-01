@@ -159,6 +159,24 @@ img {
   align-items: center;
 }
 
+.animation1{
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.animation1:hover{
+  transform: translateX(1rem);
+}
+
+.animation-scale{
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.animation-scale:hover{
+  transform: scale(1.05);
+}
+
 /* Breakpoints */
 /* For large devices */
 @media screen and (max-width: 992px) {
