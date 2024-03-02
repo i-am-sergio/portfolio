@@ -163,7 +163,6 @@ img {
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
 }
-
 .animation1:hover{
   transform: translateX(1rem);
 }
@@ -172,8 +171,16 @@ img {
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
 }
-
 .animation-scale:hover{
+  transform: scale(1.05);
+}
+
+
+.animation-scale-2{
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+.animation-scale-2:hover{
   transform: scale(1.05);
 }
 

@@ -12,20 +12,20 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="#portfolio" className="footer__link">
+            <a href="#projects" className="footer__link">
               Projects
             </a>
           </li>
           <li>
-            <a href="#testimonials" className="footer__link">
-              Testimonials
+            <a href="#skills" className="footer__link">
+              Skills
             </a>
           </li>
         </ul>
 
         <div className="footer__social">
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/sergio-mogollon"
             className="footer__social-icon"
             target="_blank"
           >

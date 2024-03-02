@@ -4,15 +4,14 @@ import { IoMdClose } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
 import { GrHostMaintenance } from "react-icons/gr";
 import { MdAppSettingsAlt } from "react-icons/md";
-import "./services.css"
+import "./services.css";
 
 const Services = () => {
-
   const [toggleState, setToggleState] = useState(0);
 
   const toggleTab = (index) => {
     setToggleState(index);
-  }
+  };
 
   return (
     <section className="services section" id="services">
@@ -26,13 +25,25 @@ const Services = () => {
               Web <br /> Development
             </h3>
           </div>
-          <span className="services__button" onClick={() => toggleTab(1)}>
+          <span 
+            className="services__button" 
+            // onClick={() => toggleTab(1)}
+          >
             View More
             <FaArrowRight className="uil uil-arrow-right services__button-icon arrow-icon" />
           </span>
-          <div className={toggleState === 1 ? "services__modal active-modal" : "services__modal"}>
+          <div
+            className={
+              toggleState === 1
+                ? "services__modal active-modal"
+                : "services__modal"
+            }
+          >
             <div className="services__modal-content">
-              <IoMdClose onClick={() => toggleTab(0)} className="uil uil-times services__modal-close" />
+              <IoMdClose
+                onClick={() => toggleTab(0)}
+                className="uil uil-times services__modal-close"
+              />
               <h3 className="services__modal-title">Product Designer</h3>
               <p className="services__modal-description">
                 Service with more than 2 years of experience. Providing quality
@@ -80,16 +91,28 @@ const Services = () => {
           <div>
             <MdAppSettingsAlt className="uil uil-arrow services__icon" />
             <h3 className="services__title">
-              App<br /> Development
+              App
+              <br /> Development
             </h3>
           </div>
-          <span className="services__button" onClick={() => toggleTab(2)}>
+          <span className="services__button" 
+            // onClick={() => toggleTab(2)}
+            >
             View More
             <FaArrowRight className="uil uil-arrow-right services__button-icon arrow-icon" />
           </span>
-          <div className={toggleState === 2 ? "services__modal active-modal" : "services__modal"}>
+          <div
+            className={
+              toggleState === 2
+                ? "services__modal active-modal"
+                : "services__modal"
+            }
+          >
             <div className="services__modal-content">
-              <IoMdClose onClick={() => toggleTab(0)} className="uil uil-times services__modal-close" />
+              <IoMdClose
+                onClick={() => toggleTab(0)}
+                className="uil uil-times services__modal-close"
+              />
               <h3 className="services__modal-title">UI/UX Designer</h3>
               <p className="services__modal-description">
                 Service with more than 2 years of experience. Providing quality
@@ -140,13 +163,24 @@ const Services = () => {
               Maintenance <br /> And Support
             </h3>
           </div>
-          <span className="services__button" onClick={() => toggleTab(3)}>
+          <span className="services__button" 
+              // onClick={() => toggleTab(3)}
+            >
             View More
             <FaArrowRight className="uil uil-arrow-right services__button-icon arrow-icon" />
           </span>
-          <div className={toggleState === 3 ? "services__modal active-modal" : "services__modal"}>
+          <div
+            className={
+              toggleState === 3
+                ? "services__modal active-modal"
+                : "services__modal"
+            }
+          >
             <div className="services__modal-content">
-              <IoMdClose onClick={() => toggleTab(0)} className="uil uil-times services__modal-close" />
+              <IoMdClose
+                onClick={() => toggleTab(0)}
+                className="uil uil-times services__modal-close"
+              />
               <h3 className="services__modal-title">Visual Designer</h3>
               <p className="services__modal-description">
                 Service with more than 2 years of experience. Providing quality

@@ -9,9 +9,7 @@ import Qualifitation from "./components/qualification/Qualifitation";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import ScrollUp from "./components/scrollup/ScrollUp";
-// import Cursor from "./components/cursor/Cursor";
 import Projects from "./components/projects/Projects";
-import ShuffleHero from "./components/projects/ShuffleHero";
 
 function App() {
   return (
@@ -23,10 +21,8 @@ function App() {
         <About />
         <Skills />
         <Qualifitation />
+        <Projects />
         <Services />
-        {/* <Example /> */}
-        {/* <Projects /> */}
-        {/* <ShuffleHero /> */}
         <Contact />
       </main>
       <Footer />
