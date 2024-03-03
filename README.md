@@ -1,3 +1,3 @@
 # Fullstack Developer Portfolio
 
-This is my developer portfolio# portfolio
+This is my developer portfolio
