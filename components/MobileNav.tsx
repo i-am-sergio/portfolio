@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import { useState } from "react";
 
 const links = [
   { name: "home", path: "/" },
@@ -22,8 +23,14 @@ const links = [
 
 const MobileNav = () => {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsOpen(false); // Cerrar el Sheet al hacer clic en un enlace
+  };
+
   return (
-    <Sheet>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger className="flex justify-center items-center">
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
@@ -34,7 +41,7 @@ const MobileNav = () => {
       <SheetContent className="flex flex-col">
         {/* logo */}
         <div className="mt-32 mb-40 text-center text-2xl">
-          <Link href="/">
+          <Link href="/" onClick={handleLinkClick}>
             <h1 className="text-4xl font-semibold">
               Sergio<span className="text-accent">.</span>
             </h1>
@@ -47,6 +54,7 @@ const MobileNav = () => {
               <Link
                 key={index}
                 href={link.path}
+                onClick={handleLinkClick} // Llamar al cierre del Sheet
                 className={`${
                   link.path === pathname &&
                   "text-accent border-b-2 border-accent"
