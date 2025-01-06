@@ -7,6 +7,7 @@ import {
   FaReact,
   FaNodeJs,
   FaVuejs,
+  FaJava,
 } from "react-icons/fa";
 
 import {
@@ -14,7 +15,11 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiSass,
+  SiDotnet,
+  SiSpring
 } from "react-icons/si";
+
+import { TbBrandCSharp } from "react-icons/tb";
 
 // about data
 const about = {
@@ -150,6 +155,22 @@ const skills = {
       icon: <SiSass />,
       name: "Sass",
     },
+    {
+      icon: <SiDotnet />,
+      name: ".NET",
+    },
+    {
+      icon: <SiSpring />,
+      name: "Spring Boot",
+    },
+    {
+      icon: <FaJava />,
+      name: "Java",
+    },
+    {
+      icon: <TbBrandCSharp />,
+      name: "C#",
+    }
   ],
 };
 
