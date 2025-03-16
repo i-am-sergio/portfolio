@@ -30,8 +30,6 @@ const Projects: React.FC = () => {
   };
 
   const Modal: React.FC<ModalProps> = ({ isOpen, onClose, imageUrl }) => {
-    if (!isOpen || !imageUrl) return null;
-
     const [windowDimensions, setWindowDimensions] = useState({
       width: 0,
       height: 0,
@@ -50,6 +48,8 @@ const Projects: React.FC = () => {
 
       return () => window.removeEventListener("resize", handleResize);
     }, []);
+
+    if (!isOpen || !imageUrl) return null;
 
     const maxWidth = windowDimensions.width * 0.8;
     const maxHeight = windowDimensions.height * 0.8;
