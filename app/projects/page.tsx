@@ -1,7 +1,7 @@
 "use client";
 import { BsArrowDownRight, BsGithub } from "react-icons/bs";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   Tooltip,
   TooltipContent,
@@ -12,10 +12,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ModalProps } from "./interfaces";
 import { projects } from "./constants";
-import { AiFillCloseCircle } from "react-icons/ai";
 import { IoIosCloseCircle } from "react-icons/io";
-import { RiCloseCircleFill } from "react-icons/ri";
-import { EyeClosedIcon } from "lucide-react";
+import { FaSearchPlus } from "react-icons/fa";
 
 const Projects: React.FC = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
@@ -47,7 +45,7 @@ const Projects: React.FC = () => {
         });
       };
 
-      handleResize(); // Establece las dimensiones iniciales
+      handleResize();
       window.addEventListener("resize", handleResize);
 
       return () => window.removeEventListener("resize", handleResize);
@@ -57,34 +55,48 @@ const Projects: React.FC = () => {
     const maxHeight = windowDimensions.height * 0.8;
 
     return (
-      <div
-        className={`fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-      >
-        <div className="relative bg-white/50 rounded-lg p-4 transition-transform duration-300 scale-100">
-        <button
-  onClick={onClose}
-  className="absolute w-10 h-10 top-2 right-2 p-0 bg-[#00ff9999] rounded-full flex items-center justify-center hover:bg-[#00ff99] transition-colors duration-200"
->
-  <IoIosCloseCircle className="w-full h-full text-black/50" />
-</button>
-          <div className="flex justify-center items-center">
-            <Image
-              src={imageUrl}
-              alt="Imagen agrandada"
-              style={{
-                maxWidth: `${maxWidth}px`,
-                maxHeight: `${maxHeight}px`,
-              }}
-              width={1000}
-              height={600}
-              sizes="100vw"
-              className="object-contain"
-            />
-          </div>
-        </div>
-      </div>
+      <AnimatePresence> {/* Envuelve el modal con AnimatePresence */}
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+            className={`fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm`}
+          >
+            <motion.div
+              className="relative bg-white/80 rounded-lg p-4"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.3 }}
+            >
+              <button
+                onClick={onClose}
+                className="absolute w-10 h-10 top-2 right-2 p-0 bg-[#00ff9999] rounded-full flex items-center justify-center hover:bg-[#00ff99] transition-colors duration-200"
+              >
+                <IoIosCloseCircle className="w-full h-full text-black/50" />
+              </button>
+              <div className="flex justify-center items-center">
+                <Image
+                  src={imageUrl}
+                  alt="Imagen agrandada"
+                  style={{
+                    maxWidth: `${maxWidth}px`,
+                    maxHeight: `${maxHeight}px`,
+                    width: "auto",
+                    height: "auto"
+                  }}
+                  width={1000}
+                  height={600}
+                  sizes="100vw"
+                  className="object-contain"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     );
   };
 
@@ -172,10 +184,14 @@ const Projects: React.FC = () => {
                   {project.images.map((image, index) => (
                     <div
                       key={index}
-                      className="w-1/2 md:w-1/2 lg:w-2/5 p-1"
-                      onClick={() => openModal(image)}
+                      className="w-1/2 md:w-1/2 lg:w-2/5 p-1 relative group" // Mantenemos relative y group
                     >
-                      <div className={`relative w-full h-[120px] }`}>
+                      <div
+                        className="relative w-full h-[120px]"
+                        onClick={() => openModal(image)}
+                      >
+                        {" "}
+                        {/* Movemos el onClick al div de la imagen */}
                         <Image
                           src={image}
                           alt={`Imagen ${index + 1}`}
@@ -183,6 +199,9 @@ const Projects: React.FC = () => {
                           sizes="300px"
                           className="object-contain"
                         />
+                        <div className="cursor-pointer absolute inset-0 flex items-center justify-center bg-black/50 opacity-30 hover:opacity-100 transition-opacity duration-300">
+                          <FaSearchPlus className="text-white text-3xl" />
+                        </div>
                       </div>
                     </div>
                   ))}
