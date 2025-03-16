@@ -26,7 +26,7 @@ const Home = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="uppercase flex items-center gap-2"
+                className="uppercase flex items-center gap-2 cursor-pointer"
                 onClick={() => window.open("/CV_SERGIO_MOGOLLON_.pdf", "_blank")}
               >
                 <span>Download CV</span>

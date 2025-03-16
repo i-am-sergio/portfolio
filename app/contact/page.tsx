@@ -1,8 +1,9 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { motion } from "framer-motion";
+import ButtonAnimated from "@/components/buttons/ButtonAnimated";
 
 import {
   Select,
@@ -34,7 +35,6 @@ const info = [
   },
 ];
 
-import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
@@ -53,38 +53,39 @@ const Contact = () => {
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-accent">Let&apos;s work together</h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                officia vero asperiores eligendi magni odio porro consequatur
-                iusto pariatur!
+              Do you need help or want to get in touch? Fill out the form and I'll get in touch. I'm open to projects and jobs.
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
+                <Input type="name" placeholder="Name / Company" />
+                {/* <Input type="lastname" placeholder="Lastname" /> */}
                 <Input type="email" placeholder="Email" />
-                <Input type="phone" placeholder="Phone Number" />
+                {/* <Input type="phone" placeholder="Phone Number" /> */}
               </div>
               {/* select */}
               <Select>
-                <SelectTrigger className="w-full">
+                <SelectTrigger className="w-full cursor-pointer">
                   <SelectValue placeholder="Select a service"></SelectValue>
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">Mobile Development</SelectItem>
-                    <SelectItem value="mst">UI/UX Design</SelectItem>
+                    <SelectItem value="web">Web Development</SelectItem>
+                    <SelectItem value="mobile">Mobile Development</SelectItem>
+                    <SelectItem value="desktop">Desktop Development</SelectItem>
+                    <SelectItem value="uiux">UI/UX Design</SelectItem>
+                    <SelectItem value="other">Others</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
               {/* textarea */}
               <Textarea
-                className="h-[200px]"
+                className="h-[150px]"
                 placeholder="Type your message here"
               />
               {/* button */}
-              <Button className="max-w-40">Send Message</Button>
+              <ButtonAnimated>Send Message</ButtonAnimated>
+              
             </form>
           </div>
           {/* info */}

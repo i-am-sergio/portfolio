@@ -9,28 +9,28 @@ const services = [
     num: "01",
     title: "Web Development",
     description:
-      "I build websites that serve as powerful marketing tools and bring memorable brand experiences.",
+      "I craft websites that act as strong marketing assets, delivering unique brand experiences.",
     href: "",
   },
   {
     num: "02",
     title: "Mobile App Development",
     description:
-      "Having a mobile-optimized site is more important than ever. Our mobile development team makes your business relevant to customers on-the-go.",
+      "I develop mobile-optimized apps, ensuring your business reaches customers seamlessly on-the-go.",
     href: "",
   },
   {
     num: "03",
     title: "UI/UX Design",
     description:
-      "My design projects are fresh and simple and will benefit your business greatly. Learn more about my work!",
+      "I design clean, modern interfaces that enhance user experience and drive business results.",
     href: "",
   },
   {
     num: "04",
     title: "Software Engineering",
     description:
-      "I create software tailored to your business needs. I specialize in building custom software from mobile apps to enterprise management systems.",
+      "I build custom software solutions, from mobile apps to robust enterprise systems, tailored to your needs.",
     href: "",
   },
 ];
@@ -63,7 +63,7 @@ const Services = () => {
                   </Link>
                 </div>
                 {/* heading */}
-                <h2 className="text-[26px] xl:text-[42px]  font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{service.title}</h2>
+                <h2 className="text-[26px] xl:text-[36px]  font-bold leading-none text-white group-hover:text-accent transition-all duration-500">{service.title}</h2>
                 {/* description */}
                 <p className="text-white/60">{service.description}</p>
                 {/* border */}
