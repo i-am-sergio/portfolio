@@ -6,7 +6,7 @@ export const projects: Project[] = [
     category: "frontend",
     title: "VI Computer Science Week",
     description:
-      "Pagina Oficial de la Semana de la Computacion organizada por la Escuela Profesional de Ciencias de la Computación",
+      "Official Website of the Computer Science Week organized by the Professional School of Computer Science",
     stack: [{ name: "React" }, { name: "Javascript" }, { name: "TailwindCSS" }],
     images: ["/assets/project1a.png", "/assets/project1b.png"],
     live: "https://i-am-sergio.github.io/react-web-epcc/",
@@ -17,7 +17,7 @@ export const projects: Project[] = [
     category: "frontend",
     title: "IHC Projects Landing Page",
     description:
-      "Landing Page de los proyectos de la materia de Interaccion Humano Computador",
+      "Landing Page for the projects of the Human-Computer Interaction course",
     stack: [{ name: "React" }, { name: "Javascript" }, { name: "TailwindCSS" }],
     images: ["/assets/project2a.png", "/assets/project2b.png"],
     live: "https://i-am-sergio.github.io/human-computer-interaction/",
@@ -28,7 +28,7 @@ export const projects: Project[] = [
     category: "Mobile App",
     title: "AI Expert System for Vocational Guidance",
     description:
-      "Aplicación móvil con IA para orientación vocacional personalizada.",
+      "Mobile application with AI for personalized vocational guidance.",
     stack: [{ name: "React Native" }, { name: "Js" }, { name: "skfuzzy" }],
     images: [
       "/assets/project3a.png",
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     category: "Backend",
     title: "Student Enrollment Management System",
     description:
-      "Sistema de gestión de matrículas escalable para la Universidad Nacional de San Agustín (UNSA), basado en microservicios.",
+      "Scalable student enrollment management system for the National University of San Agustín (UNSA), based on microservices.",
     stack: [
       { name: ".NET" },
       { name: "Docker" },
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     category: "Computer Vision",
     title: "Exercise Monitoring System - OpenCV",
     description:
-      "Sistema de monitoreo de ejercicios con OpenCV, NumPy, C++ y Python.",
+      "Exercise monitoring system with OpenCV, NumPy, C++, and Python.",
     stack: [
       { name: "OpenCV" },
       { name: "Tensorflow" },
@@ -78,10 +78,32 @@ export const projects: Project[] = [
     category: "Web Application",
     title: "UNIverse: Social Network Web Application",
     description:
-      "Red social para estudiantes y profesores con publicaciones, mensajería y seguimiento.",
+      "Social network for students and professors with posts, messaging, and following.",
     stack: [{ name: "React" }, { name: "SpringBoot" }, { name: "MySql" }, { name: "JUnit" }, { name: "SonarCloud" },],
     images: ["/assets/project6a.png", "/assets/project6b.png"],
     live: "https://github.com/i-am-sergio/universe_social_network_web_app", 
     github: "https://github.com/i-am-sergio/universe_social_network_web_app",
+  },
+  {
+    num: "07",
+    category: "Software Tool",
+    title: "TeamTrack: Program Comprehension and Team Collaboration",
+    description:
+      "Collaboration tool for Git repositories with AI, chat, and code visualization.",
+    stack: [{ name: "RemixJs" }, { name: "Git" }, {name: "SocketIO"}, {name: "GeminiAI"}],
+    images: ["/assets/project7a.png", "/assets/project7b.png"],
+    live: "#",
+    github: "#",
+  },
+  {
+    num: "08",
+    category: "Video Game",
+    title: "VR Space Survival",
+    description:
+      "VR survival and strategy game for Oculus Metaquest 2 with natural interfaces.",
+    stack: [{ name: "Unity" }, { name: "C#" }, { name: "VR" }],
+    images: ["/assets/project8a.png", "/assets/project8b.png"],
+    live: "https://github.com/i-am-sergio/TryNotDie", 
+    github: "https://github.com/i-am-sergio/TryNotDie",
   },
 ];

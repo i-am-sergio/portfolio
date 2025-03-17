@@ -58,6 +58,7 @@ const Projects: React.FC = () => {
       <AnimatePresence> {/* Envuelve el modal con AnimatePresence */}
         {isOpen && (
           <motion.div
+          onClick={onClose}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
@@ -73,7 +74,7 @@ const Projects: React.FC = () => {
             >
               <button
                 onClick={onClose}
-                className="absolute w-10 h-10 top-2 right-2 p-0 bg-[#00ff9999] rounded-full flex items-center justify-center hover:bg-[#00ff99] transition-colors duration-200"
+                className="absolute w-10 h-10 top-2 right-2 p-0 bg-[#00ff9999] rounded-full flex items-center justify-center hover:bg-[#00ff99] transition-colors duration-200 cursor-pointer"
               >
                 <IoIosCloseCircle className="w-full h-full text-black/50" />
               </button>
