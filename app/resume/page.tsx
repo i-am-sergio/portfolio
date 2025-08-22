@@ -74,9 +74,14 @@ const experience = {
       duration: "2022 - 2024",
     },
     {
-      company: "Tech Academy",
-      position: "Instructor",
-      duration: "Summer 2024",
+      company: "IEEE Student Branch UNSA",
+      position: "Instructor & Software Engineer",
+      duration: "2024 - 2025",
+    },
+    {
+      company: "Phinix SAC",
+      position: "FullStack Developer",
+      duration: "2024 - 2025",
     },
   ],
 };
